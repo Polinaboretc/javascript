@@ -2,26 +2,7 @@
 //se il numero è divisibile per 3, scrivo in console FIZZ
 //se il numero è divisibile per 5, scrivo in console BUZZ
 //se il numero è divisibile per entrambi, scrivo in console FIZZBUZZ
-14  
-index.html
-@@ -0,0 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First JS Project</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./fizzbuzz.js"></script>
-</head>
-<body>
 
-</body>
-</html> 
- 137  
-script.js
-@@ -0,0 +1,137 @@
 
 // string
 

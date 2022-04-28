@@ -166,25 +166,88 @@
 
 
 // variante numero due
-const aggiungiUnoAnonima = function(numero) {
-   return numero + 1;
+// const aggiungiUnoAnonima = function(numero) {
+//    return numero + 1;
+// }
+
+// const risultato4 = aggiungiUno(5);
+
+// console.log("funzione anonima", risultato4);
+
+
+// // variante numero tre
+// const aggiungiUnoLambda = (numero) => numero + 1;
+
+// const risultato5 = aggiungiUnoNew(8);
+
+// console.log("funzione lambda", risultato5);
+
+
+
+// const dividiLambda = (dividendo, divisore) => {
+//     const quoziente = dividendo / divisore;
+//     return quoziente;
+// }
+
+
+
+function somma(numero1, numero2) {
+    return numero1 + numero2;
 }
 
-const risultato4 = aggiungiUno(5);
 
-console.log("funzione anonima", risultato4);
-
-
-// variante numero tre
-const aggiungiUnoLambda = (numero) => numero + 1;
-
-const risultato5 = aggiungiUnoNew(8);
-
-console.log("funzione lambda", risultato5);
-
-
-
-const dividiLambda = (dividendo, divisore) => {
-    const quoziente = dividendo / divisore;
-    return quoziente;
+function sottrazione(numero1, numero2) {
+    return numero1 - numero2;
 }
+
+
+function divisione(numero1, numero2) {
+    return numero1 / numero2;
+}
+
+
+function moltiplicazione(numero1, numero2) {
+    return numero1 * numero2;
+}
+
+
+function resto(numero1, numero2) {
+    return numero1 % numero2;
+}
+
+
+const restoLambda = (n1, n2) => n1 % n2;
+
+
+// funzione di ordine superiore
+
+function eseguiOperazione(numero1, numero2, operazione) {
+    return operazione(numero1, numero2);
+}
+
+console.log(eseguiOperazione(5, 3, somma));
+
+console.log(eseguiOperazione(9, 4, (n1, n2) => n1 % n2));
+
+
+
+
+
+function somma1(numero) {
+    return numero + 1;
+}
+
+
+function somma2(numero) {
+    return numero + 2;
+}
+
+
+function generaSomma(numeroDaSommare) {
+    return (numero) => numero + numeroDaSommare
+}
+
+
+const sommaTre = generaSomma(3);
+
+console.log(sommaTre(5));
