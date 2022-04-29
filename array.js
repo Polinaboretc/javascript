@@ -392,7 +392,6 @@ console.log('javascript square', testArray.map((element) => element * element));
 
 
 
-const testArray4 = [2, 4, 7, -9, 1000, 45, 2, 12, 333, -1000, 123, 34];
 
 const testArray5 = ['rosso', 'verde', 'giallo', 'arancione', 'magenta', 'blu'];
 
@@ -404,16 +403,16 @@ const testArray6 = [true, "pippo", 204, "verde", 3000, 100, false];
 /// aggiungere parametri sia element che index per lavorare su l'index
 
 
-function filterByIndex(element, index) {
+// function filterByIndex(element, index) {
     
-    if (index % 2 === 0) {
-        return true;
-    } else {
-        return false;
-    }
-}
-console.log("tieni indice pari", testArray4.filter(filterByIndex));
-console.log("tieni indice pari lambda", testArray4.filter((e, i) => i % 2 === 0));
+//     if (index % 2 === 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// console.log("tieni indice pari", testArray4.filter(filterByIndex));
+// console.log("tieni indice pari lambda", testArray4.filter((e, i) => i % 2 === 0));
 
 
 
@@ -530,3 +529,50 @@ function reducerSumAllEvenIndex(previos, current, index) {
 
 
 console.log('somma indice pari', test.reduce(reducerSumAllEvenIndex, 0));
+
+
+
+
+
+
+
+
+
+
+/// algoritmi di sorting
+
+function sortNumbers(el1, el2) {
+    if (el1 > el2) {
+       return 1; 
+    } else if (el1 < el2) {
+        return -1;
+    } else {
+        return 0;
+    }
+}
+
+
+function compareNumber(el1, el2) {
+    return el1 - el2;
+    
+}
+
+function compareString(el1, el2) {
+    return el1.localeCompare(el2);
+}
+
+function compareStringByLength(el1, el2) {
+    return el1.length - el2.length;
+}
+
+
+const arrayOfNumbers = [1, 5, 3, 8, 6];
+const arrayOfStrings = ['balcone', 'aritmetica', 'giallo', 'zuzzerellone']
+const testArray4 = [2, 4, 7, -9, 1000, 45, 2, 12, 333, -1000, 123, 34];
+
+arrayOfNumbers.sort(compareNumber);
+
+arrayOfStrings.sort(compareNumber2);
+
+console.log(testArray4);
+
